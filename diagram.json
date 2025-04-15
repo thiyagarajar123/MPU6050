@@ -1,0 +1,18 @@
+{
+    "version": 1,
+    "author": "SANJITHA S",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "wokwi-pi-pico", "id": "pico", "top": 0, "left": 0, "attrs": {} },
+      { "type": "wokwi-mpu6050", "id": "imu1", "top": -5.78, "left": -141.68, "attrs": {} }
+    ],
+    "connections": [
+      [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+      [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+      [ "imu1:VCC", "pico:3V3", "red", [ "v-57.6", "h0.08" ] ],
+      [ "imu1:GND", "pico:GND.1", "black", [ "v0" ] ],
+      [ "imu1:SCL", "pico:GP5", "green", [ "v0" ] ],
+      [ "imu1:SDA", "pico:GP4", "green", [ "v0" ] ]
+    ],
+    "dependencies": {}
+  }
